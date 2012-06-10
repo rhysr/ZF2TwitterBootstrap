@@ -26,9 +26,9 @@ class FormLabel extends \Zend\Form\View\Helper\FormLabel
      * @param  array $attributes
      * @return string
      */
-    //public function createAttributesString(array $attributes)
-    //{
-    //    $attributes['class'] = 'control-label';
-    //    return parent::createAttributesString($attributes);
-    //}
+    public function createAttributesString(array $attributes)
+    {
+        $attributes['class'] = 'control-label';
+        return parent::createAttributesString($attributes);
+    }
 }
