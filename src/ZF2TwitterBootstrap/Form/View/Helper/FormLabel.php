@@ -28,7 +28,12 @@ class FormLabel extends \Zend\Form\View\Helper\FormLabel
      */
     public function createAttributesString(array $attributes)
     {
-        $attributes['class'] = 'control-label';
+        if (isset($attributes['class'])) {
+            $attributes['class'] = trim($attributes['class'] . ' ' . $this->cssClass);
+        } else {
+            $attributes['class'] = $this->cssClass;
+        }
+
         return parent::createAttributesString($attributes);
     }
 }

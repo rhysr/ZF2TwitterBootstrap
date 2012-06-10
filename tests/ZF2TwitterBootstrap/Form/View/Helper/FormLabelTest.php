@@ -34,4 +34,19 @@ class FormLabelTest extends PHPUnit_Framework_TestCase
         }
         $this->assertContains(sprintf('%s="%s"', 'class', 'control-label'), $markup);
     }
+
+
+    public function testControlLabelClassIsAddedToPassedCssClasses()
+    {
+        $attributes = array(
+            'class' => 'foo bar'
+        );
+        $markup = $this->helper->openTag($attributes);
+
+        $this->assertEquals(1, preg_match('/class="(.*)"/', $markup, $matches));
+        $classes = explode(' ', $matches[1]);
+        $this->assertContains('foo', $classes);
+        $this->assertContains('bar', $classes);
+        $this->assertContains('control-label', $classes);
+   }
 }
