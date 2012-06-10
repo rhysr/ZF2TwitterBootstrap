@@ -1,0 +1,27 @@
+<phpunit
+    bootstrap="bootstrap.php"
+    backupGlobals="true"
+    backupStaticAttributes="true"
+    cacheTokens="true"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    forceCoversAnnotation="true"
+    mapTestClassNameToCoveredClassName="true"
+    processIsolation="true"
+    stopOnError="true"
+    stopOnFailure="true"
+    strict="true"
+    verbose="false">
+
+    <testsuite name="ZF2 Twitter Bootstrap">
+        <directory>.</directory>
+    </testsuite>
+
+    <filter>
+        <blacklist>
+            <directory suffix=".php">.</directory>
+        </blacklist>
+    </filter>
+</phpunit>
