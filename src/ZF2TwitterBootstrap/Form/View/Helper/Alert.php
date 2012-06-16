@@ -46,4 +46,10 @@ class Alert extends AbstractHelper
                  . $this->closeTag();
         return $output;
     }
+
+
+    public function __invoke()
+    {
+        return $this;
+    }
 }

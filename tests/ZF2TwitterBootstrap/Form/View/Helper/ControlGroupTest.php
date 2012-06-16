@@ -75,4 +75,10 @@ class ControlGroupTest extends PHPUnit_Framework_TestCase
         $this->assertContains('error', $classes);
         $this->assertContains('control-group', $classes);
     }
+
+
+    public function testInvokeHasFluentInterface()
+    {
+        $this->assertSame($this->helper, $this->helper->__invoke());
+    }
 }

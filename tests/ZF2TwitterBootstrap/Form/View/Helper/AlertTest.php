@@ -81,4 +81,10 @@ class AlertTest extends PHPUnit_Framework_TestCase
         $this->assertContains('<strong>' . $alertTitle . '</strong>', $markup);
         $this->assertContains($alertMessage, $markup);
     }
+
+
+    public function testInvokeHasFluentInterface()
+    {
+        $this->assertSame($this->helper, $this->helper->__invoke());
+    }
 }

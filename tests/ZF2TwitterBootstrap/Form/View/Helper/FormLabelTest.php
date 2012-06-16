@@ -49,4 +49,10 @@ class FormLabelTest extends PHPUnit_Framework_TestCase
         $this->assertContains('bar', $classes);
         $this->assertContains('control-label', $classes);
    }
+
+
+    public function testInvokeHasFluentInterface()
+    {
+        $this->assertSame($this->helper, $this->helper->__invoke());
+    }
 }
