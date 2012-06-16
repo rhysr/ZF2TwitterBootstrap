@@ -20,6 +20,9 @@
     "autoload": {
         "psr-0": {
             "ZF2TwitterBootstrap": "src/"
-        }
+        },
+        "classmap": [
+            "./"
+        ]
     }
 }
