@@ -1,0 +1,10 @@
+<project name="ZF2TwitterBootstrap Module" default="phpunit">
+    <target name="phpunit">
+        <exec
+            command="phpunit"
+            dir="${project.basedir}/tests"
+            passthru="true"
+            />
+    </target>
+
+</project>
